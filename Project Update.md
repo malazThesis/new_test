@@ -14,6 +14,7 @@ New:
 -Learning-rate sensitivity tests for the main GraphSAGE/PairNorm results
 
 Current results:
+
 -The results so far suggest that deep-model degradation is closely related to representation collapse in some settings, especially on PubMed.
 
 -PairNorm often preserves a less collapsed representation and can strongly reduce the performance loss with depth. However, this is not universal: on Roman-Empire the baseline representations can recover during training, and PairNorm gives much smaller or sometimes no performance benefit.
