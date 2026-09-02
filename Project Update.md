@@ -1,10 +1,16 @@
 New:
 -Additional oversmoothing experiments for deeper GCN and GraphSAGE models
+
 -Comparison of baseline models with PairNorm
+
 -Representation analysis using normalized Dirichlet energy, effective rank, and cosine-distance based measures
+
 -Temporal analysis of how hidden representations change during training
+
 -Controlled homophily experiments on PubMed and Roman-Empire
+
 -Additional graph × initialization experiments to separate graph effects from random initialization
+
 -Learning-rate sensitivity tests for the main GraphSAGE/PairNorm results
 
 Current results:
