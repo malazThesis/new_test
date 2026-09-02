@@ -1,0 +1,17 @@
+{
+  "dataset": "Squirrel",
+  "model": "GraphSAGEPairNorm",
+  "seed": 1,
+  "split_idx": 2,
+  "num_layers": 4,
+  "hidden_channels": 128,
+  "epochs": 800,
+  "learning_rate": 0.003,
+  "weight_decay": 0.0005,
+  "final_train_acc": 0.9947916666666666,
+  "final_val_acc": 0.29867788461538464,
+  "final_test_acc": 0.3025936599423631,
+  "best_epoch": 6,
+  "best_val_acc": 0.34435096153846156,
+  "best_test_acc_at_best_val": 0.3208453410182517
+}

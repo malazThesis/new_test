@@ -1,0 +1,17 @@
+{
+  "dataset": "Actor",
+  "model": "GraphSAGEPairNorm",
+  "seed": 1,
+  "split_idx": 6,
+  "num_layers": 8,
+  "hidden_channels": 128,
+  "epochs": 800,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0005,
+  "final_train_acc": 0.7543859649122807,
+  "final_val_acc": 0.2902960526315789,
+  "final_test_acc": 0.29407894736842105,
+  "best_epoch": 651,
+  "best_val_acc": 0.30962171052631576,
+  "best_test_acc_at_best_val": 0.31776315789473686
+}
