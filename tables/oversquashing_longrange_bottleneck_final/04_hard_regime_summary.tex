@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\caption{Descriptive summary of the difficult long-range regime ($d \geq 6$, bottleneck width $\leq 2$). Each entry summarizes graph-level means after averaging three initialization seeds.}
+\label{tab:longrange_hard_regime}
+\begin{tabular}{lllr}
+\toprule
+Model & Accuracy (%) & Specificity & Graph-condition means \\
+\midrule
+GraphSAGE & 58.59 ± 1.64 & 0.517 ± 0.030 & 30 \\
++ PairNorm & 97.56 ± 0.53 & 0.944 ± 0.010 & 30 \\
++ Rewiring & 100.00 ± 0.00 & 0.999 ± 0.001 & 30 \\
+PairNorm + Rewiring & 99.99 ± 0.03 & 0.958 ± 0.005 & 30 \\
+\bottomrule
+\end{tabular}
+\end{table}

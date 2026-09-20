@@ -1,0 +1,5 @@
+Model,Accuracy (%),Specificity,Graph-condition means
+GraphSAGE,58.59 ± 1.64,0.517 ± 0.030,30
++ PairNorm,97.56 ± 0.53,0.944 ± 0.010,30
++ Rewiring,100.00 ± 0.00,0.999 ± 0.001,30
+PairNorm + Rewiring,99.99 ± 0.03,0.958 ± 0.005,30
