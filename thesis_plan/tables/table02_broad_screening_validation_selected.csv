@@ -1,0 +1,16 @@
+Dataset,Phase 1 Baseline,Phase 1 Full,Phase 2 Baseline,Phase 2 Full
+Cora,GAT · L4 · H128 · 79.50%,GAT · L4 · H128 · 79.50%,GCN · L8 · H64 · 76.70 ± 0.85%,GCN · L8 · H64 · 76.70 ± 0.85%
+CiteSeer,GraphSAGE · L2 · H128 · 70.60%,GraphSAGE · L2 · H128 · 70.60%,GCN · L8 · H128 · 63.27 ± 0.31%,GCN · L8 · H128 · 63.27 ± 0.31%
+PubMed,GraphSAGE · L2 · H64 · 77.20%,GATPairNorm · L4 · H128 · 77.30%,GAT · L8 · H128 · 77.57 ± 1.38%,GATPairNorm · L8 · H128 · 76.47 ± 0.95%
+Roman-Empire,GraphSAGE · L4 · H128 · 79.37 ± 0.58%,GraphSAGE · L4 · H128 · 79.42 ± 0.51%,GraphSAGE · L8 · H128 · 68.06 ± 0.67%,GraphSAGEPairNorm · L8 · H128 · 71.62 ± 0.78%
+Amazon-Photo,GAT · L2 · H128 · 91.51 ± 0.57%,GAT · L2 · H128 · 91.63 ± 0.60%,GCN · L8 · H64 · 82.58 ± 2.57%,GraphSAGEPairNorm · L8 · H128 · 87.07 ± 1.30%
+Amazon-Computers,GCN · L2 · H128 · 83.71 ± 0.79%,GCN · L2 · H128 · 83.74 ± 0.58%,GCN · L8 · H64 · 56.63 ± 9.74%,GraphSAGEPairNorm · L8 · H128 · 82.37 ± 1.47%
+Coauthor-CS,GCN · L2 · H128 · 91.22 ± 0.69%,GCN · L2 · H128 · 91.22 ± 0.69%,GCN · L8 · H64 · 86.17 ± 0.92%,GCN · L8 · H64 · 86.09 ± 0.90%
+Coauthor-Physics,GCN · L4 · H64 · 92.83 ± 0.29%,GCN · L2 · H64 · 93.20 ± 0.54%,GCN · L8 · H64 · 92.30 ± 0.56%,GCN · L8 · H64 · 92.21 ± 0.49%
+Actor,GraphSAGE · L4 · H64 · 34.49 ± 1.11%,GraphSAGE · L4 · H64 · 34.39 ± 1.15%,GCN · L8 · H64 · 26.40 ± 1.25%,GraphSAGEPairNorm · L8 · H128 · 32.87 ± 0.60%
+Chameleon,GraphSAGE · L2 · H64 · 49.82 ± 2.32%,GraphSAGE · L2 · H64 · 49.82 ± 2.32%,GraphSAGE · L8 · H64 · 42.83 ± 2.80%,GraphSAGE · L8 · H64 · 42.57 ± 2.74%
+Squirrel,GraphSAGE · L2 · H64 · 36.95 ± 2.27%,GraphSAGE · L2 · H64 · 36.95 ± 2.27%,GraphSAGE · L8 · H128 · 31.99 ± 1.65%,GraphSAGEPairNorm · L16 · H64 · 31.76 ± 0.85%
+Cornell,GraphSAGE · L2 · H128 · 71.08 ± 5.56%,GraphSAGE · L2 · H128 · 71.08 ± 5.56%,GraphSAGE · L8 · H64 · 56.22 ± 6.96%,GraphSAGEPairNorm · L8 · H64 · 52.43 ± 12.30%
+Texas,GraphSAGE · L2 · H128 · 78.65 ± 5.76%,GraphSAGE · L2 · H128 · 78.65 ± 5.76%,GraphSAGE · L8 · H128 · 65.68 ± 7.21%,GraphSAGE · L8 · H128 · 64.86 ± 7.32%
+Wisconsin,GraphSAGE · L2 · H128 · 80.20 ± 4.66%,GraphSAGE · L2 · H128 · 80.78 ± 4.51%,GraphSAGE · L8 · H128 · 66.67 ± 7.22%,GraphSAGE · L8 · H128 · 64.12 ± 7.28%
+Amazon-Ratings,GraphSAGE · L4 · H128 · 45.76 ± 0.41%,GraphSAGEPairNorm · L4 · H128 · 50.10 ± 0.41%,GAT · L8 · H128 · 42.96 ± 0.22%,GraphSAGEPairNorm · L8 · H128 · 48.00 ± 0.61%

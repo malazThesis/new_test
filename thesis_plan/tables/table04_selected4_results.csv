@@ -1,0 +1,5 @@
+Dataset,Matched LR,GS depth loss (pp),PN depth loss (pp),DiD (pp),Holm p,Cohen dz,L8 NDE ratio,L8 rank ratio
+Amazon-Ratings,0.003,2.734,0.928,+1.806,0.005859,+2.316,2.31×,3.63×
+Squirrel,0.03,4.092,0.893,+3.199,0.005859,+2.977,3.14×,2.30×
+Roman-Empire,0.005,0.184,2.243,-2.060,0.005859,-2.001,1.61×,0.99×
+Actor,0.0003,1.178,3.132,-1.954,0.011719,-1.291,1.47×,2.30×

@@ -1,0 +1,26 @@
+Factor,Setting
+Graph family,Contextual stochastic block model
+Nodes,"2,000"
+Node features,64
+Classes,2 balanced classes
+Target homophily,"0.1, 0.5, 0.9"
+Target average degree,20
+Feature signal,"0.25, 0.50"
+Feature construction,Isotropic Gaussian noise + class-dependent shift along one random unit direction
+Class-mean separation,Equal to feature-signal parameter
+Models,GraphSAGE; GraphSAGE + PairNorm
+Depths,"2, 7, 8"
+Hidden dimension,128
+Train / validation / test,5% / 10% / 85%
+Training nodes,100 total (50 per class)
+Validation nodes,200 total (100 per class)
+Test nodes,"1,700 total (850 per class)"
+Available mask splits,10 stratified splits per graph
+Evaluated split,Split 0
+Replications,5 coupled graph/training seeds
+Seeds,"1, 2, 3, 4, 5"
+Learning rate,0.01
+Training epochs,200
+Dropout,0.5
+Weight decay,0.0005
+Total runs,180

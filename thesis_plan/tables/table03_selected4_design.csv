@@ -1,0 +1,5 @@
+Dataset,Selection role,Models,Depths,Hidden dimension,Splits,Epochs
+Amazon-Ratings,Contrasting case with reduced depth degradation under PairNorm,GraphSAGE / GraphSAGE + PairNorm,"L = 4, 8",128,10 identical splits,800
+Squirrel,Contrasting case with reduced depth degradation under PairNorm,GraphSAGE / GraphSAGE + PairNorm,"L = 4, 8",128,10 identical splits,800
+Roman-Empire,Counterexample with increased depth degradation under PairNorm,GraphSAGE / GraphSAGE + PairNorm,"L = 4, 8",128,10 identical splits,800
+Actor,Counterexample despite stronger representation-diversity diagnostics,GraphSAGE / GraphSAGE + PairNorm,"L = 4, 8",128,10 identical splits,800

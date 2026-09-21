@@ -1,0 +1,13 @@
+Factor,Setting
+Dataset families,PubMed-derived; Roman-Empire-derived
+Target homophily,"0.1, 0.5, 0.9"
+Models,"GraphSAGE, GraphSAGE + PairNorm"
+Depths,"7, 8"
+Hidden dimension,128
+Graph seeds,"1, 2, 3, 4, 5"
+Initialization seeds,"11, 29, 47, 65, 83"
+Split index,0
+Training epochs,2400
+Observed factorial cells,600
+Expected factorial cells,600
+Missing factorial cells,0

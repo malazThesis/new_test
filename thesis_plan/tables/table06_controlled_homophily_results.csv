@@ -1,0 +1,7 @@
+Dataset,Target h,GS test acc. (best-val ckpt.),PN test acc. (best-val ckpt.),PN effect (pp),GS NDE @2400,PN NDE @2400,GS effective rank @2400,PN effective rank @2400
+PubMed,0.1,39.94%,83.49%,+43.55,5.20e-26,2.652,1.000,4.688
+PubMed,0.5,39.94%,78.09%,+38.16,2.79e-20,1.404,1.000,4.814
+PubMed,0.9,78.80%,88.56%,+9.76,0.134,0.231,2.534,3.476
+Roman-Empire,0.1,51.89%,55.56%,+3.67,1.211,1.685,11.278,16.968
+Roman-Empire,0.5,71.82%,78.68%,+6.85,0.284,0.726,11.579,20.027
+Roman-Empire,0.9,98.55%,98.13%,-0.42,0.082,0.187,9.969,17.178
