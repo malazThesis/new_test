@@ -1,0 +1,5 @@
+Variant,Accuracy [\%],Specificity
+GraphSAGE,58.59 $\pm$ 0.55,0.5166 $\pm$ 0.0189
+PairNorm,97.56 $\pm$ 0.21,0.9438 $\pm$ 0.0020
+Rewired,100.00 $\pm$ 0.00,0.9994 $\pm$ 0.0003
+PairNorm + Rewired,99.99 $\pm$ 0.01,0.9579 $\pm$ 0.0009

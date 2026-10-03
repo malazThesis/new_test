@@ -1,0 +1,2 @@
+data_path,dataset,variant,model,replicate_seed,init_seed,num_layers,hidden_channels,lr,weight_decay,dropout
+realworld_data/oversquashing_rewiring_v3/pubmed/pubmed_splitseed1_original.pt,pubmed,original,GraphSAGE,1,11,8,128,0.001,0.0005,0.5

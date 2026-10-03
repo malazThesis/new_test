@@ -1,0 +1,2 @@
+distance,bottleneck_width,model,graph_seed,init_seed,n_sources,hidden_dim,num_layers,train_graphs,val_graphs,test_graphs,batch_size,epochs,patience,lr,weight_decay,dropout
+2,1,GraphSAGE,1,11,32,32,2,16,8,8,8,3,2,0.003,0.0,0.0
