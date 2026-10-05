@@ -1,0 +1,13 @@
+Dataset,Model,Budget,Targeted - Random [pp],95% CI,Positive replicates,Negative replicates,Exact sign-flip p
+PubMed,GraphSAGE,0.5%,-0.34,"[-0.99, 0.31]",2,3,0.2500
+PubMed,GraphSAGE,1.0%,-0.10,"[-0.37, 0.17]",1,4,0.3750
+PubMed,GraphSAGE,2.0%,-0.04,"[-0.45, 0.37]",3,2,0.8750
+PubMed,GraphSAGE + PairNorm,0.5%,-0.14,"[-0.49, 0.22]",2,3,0.3750
+PubMed,GraphSAGE + PairNorm,1.0%,0.14,"[-0.23, 0.51]",3,2,0.3750
+PubMed,GraphSAGE + PairNorm,2.0%,-0.16,"[-0.48, 0.17]",1,4,0.3125
+Roman-Empire,GraphSAGE,0.5%,-1.99,"[-5.19, 1.21]",1,4,0.1875
+Roman-Empire,GraphSAGE,1.0%,-1.32,"[-3.94, 1.31]",1,4,0.2500
+Roman-Empire,GraphSAGE,2.0%,2.26,"[-1.10, 5.61]",3,2,0.2500
+Roman-Empire,GraphSAGE + PairNorm,0.5%,0.00,"[-1.37, 1.38]",3,2,1.0000
+Roman-Empire,GraphSAGE + PairNorm,1.0%,-0.17,"[-0.54, 0.19]",2,3,0.2500
+Roman-Empire,GraphSAGE + PairNorm,2.0%,-0.01,"[-0.44, 0.41]",3,2,0.9375
