@@ -75,7 +75,19 @@ BUDGET_X = {
 # ============================================================
 # 1. ACCURACY VS BUDGET
 # One figure per dataset.
+#
+# Visual convention:
+# - GraphSAGE = blue
+# - GraphSAGE + PairNorm = orange
+# - Original = dashed horizontal line
+# - Random = solid line with circles
+# - Targeted = solid line with squares
 # ============================================================
+
+MODEL_COLOR = {
+    "GraphSAGE": "tab:blue",
+    "GraphSAGEPairNorm": "tab:orange",
+}
 
 for dataset in [
     "pubmed",
@@ -94,7 +106,14 @@ for dataset in [
         "GraphSAGE",
         "GraphSAGEPairNorm",
     ]:
+        color = MODEL_COLOR[
+            model
+        ]
+
+        # ----------------------------------------------------
         # Original baseline
+        # ----------------------------------------------------
+
         base = x[
             (
                 x["model"]
@@ -117,56 +136,100 @@ for dataset in [
 
         ax.axhline(
             baseline,
-            linestyle=":",
-            linewidth=1.2,
+            color=color,
+            linestyle="--",
+            linewidth=1.6,
             label=(
                 MODEL_LABEL[model]
                 + " — Original"
             ),
         )
 
-        for variant, marker in [
-            ("random", "o"),
-            ("targeted", "s"),
-        ]:
-            g = x[
-                (
-                    x["model"]
-                    == model
-                )
-                &
-                (
-                    x["variant"]
-                    == variant
-                )
-            ].copy()
+        # ----------------------------------------------------
+        # Random rewiring
+        # ----------------------------------------------------
 
-            g["budget_x"] = (
-                g["budget_label"]
-                .map(BUDGET_X)
+        g = x[
+            (
+                x["model"]
+                == model
             )
+            &
+            (
+                x["variant"]
+                == "random"
+            )
+        ].copy()
 
-            g = g.sort_values(
-                "budget_x"
-            )
+        g["budget_x"] = (
+            g["budget_label"]
+            .map(BUDGET_X)
+        )
 
-            ax.errorbar(
-                g["budget_x"],
-                g["mean_accuracy_pct"],
-                yerr=g[
-                    "sd_accuracy_pct"
-                ],
-                marker=marker,
-                capsize=3,
-                linewidth=1.5,
-                label=(
-                    MODEL_LABEL[model]
-                    + " — "
-                    + VARIANT_LABEL[
-                        variant
-                    ]
-                ),
+        g = g.sort_values(
+            "budget_x"
+        )
+
+        ax.errorbar(
+            g["budget_x"],
+            g["mean_accuracy_pct"],
+            yerr=g[
+                "sd_accuracy_pct"
+            ],
+            color=color,
+            marker="o",
+            linestyle=":",
+            capsize=3,
+            linewidth=1.5,
+            markersize=5,
+            label=(
+                MODEL_LABEL[model]
+                + " — Random"
+            ),
+        )
+
+        # ----------------------------------------------------
+        # Targeted rewiring
+        # ----------------------------------------------------
+
+        g = x[
+            (
+                x["model"]
+                == model
             )
+            &
+            (
+                x["variant"]
+                == "targeted"
+            )
+        ].copy()
+
+        g["budget_x"] = (
+            g["budget_label"]
+            .map(BUDGET_X)
+        )
+
+        g = g.sort_values(
+            "budget_x"
+        )
+
+        ax.errorbar(
+            g["budget_x"],
+            g["mean_accuracy_pct"],
+            yerr=g[
+                "sd_accuracy_pct"
+            ],
+            color=color,
+            marker="s",
+            linestyle="-",
+            capsize=3,
+            linewidth=1.5,
+            markersize=5,
+            label=(
+                MODEL_LABEL[model]
+                + " — Targeted"
+            ),
+        )
 
     ax.set_xlabel(
         "Added-edge budget [% of original edges]"
@@ -190,12 +253,32 @@ for dataset in [
         alpha=0.25,
     )
 
+    # ----------------------------------------------------
+    # Legend outside the plotting area.
+    #
+    # A separate white legend box is placed below the axes
+    # so that none of the data are covered.
+    # ----------------------------------------------------
+
     ax.legend(
+        loc="upper left",
+        bbox_to_anchor=(0.0, -0.20),
         fontsize=8,
-        frameon=False,
+        frameon=True,
+        facecolor="white",
+        edgecolor="0.75",
+        framealpha=1.0,
+        ncol=2,
+        borderpad=0.8,
+        columnspacing=1.4,
+        handlelength=2.4,
     )
 
-    fig.tight_layout()
+    # Reserve explicit space for the legend underneath
+    # the actual plotting area.
+    fig.subplots_adjust(
+        bottom=0.31
+    )
 
     stem = (
         OUT
